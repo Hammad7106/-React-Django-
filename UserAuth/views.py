@@ -89,12 +89,6 @@ def message(request):
     return Response ({"message" : "Hello Hammad I am from Django Backend...."})
 
 
-# views.py
-
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from rest_framework import status
-
 @api_view(['GET'])
 def get_current_user(request):
     if request.user.is_authenticated:

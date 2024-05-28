@@ -10,6 +10,6 @@ class UserProfile(models.Model):
 
 class Post(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
-    post_title = models.CharField(max_length=20)
-    post_content = models.CharField(max_length=500)
+    post_title = models.CharField(max_length=202)
+    post_content = models.TextField()
 
