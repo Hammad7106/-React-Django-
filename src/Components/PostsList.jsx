@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function PostsList() {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [userId, setUserId] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchData() {
@@ -37,8 +39,7 @@ function PostsList() {
   };
 
   const handleEdit = (postId) => {
-    console.log(`Editing post with ID ${postId}`);
-    window.location.href = `/posts/${postId}/edit`;
+    navigate(`/posts/${postId}/edit`);
   };
 
   return (

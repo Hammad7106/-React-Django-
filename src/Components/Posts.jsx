@@ -55,9 +55,9 @@ function Posts() {
     <div className="max-w-md mx-auto bg-white shadow-md rounded-md p-6">
       <h2 className="text-2xl font-bold mb-4">Create a New Post</h2>
       <h2>Welcome, {username}</h2>
-      {userId && (
+      {/* {userId && (              //Fetch User ID and Show on page
         <p className="text-gray-600 mb-4">User ID: {userId}</p>
-      )}
+      )} */}
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="postTitle" className="block text-sm font-semibold text-gray-600">Title:</label>
